@@ -70,16 +70,21 @@ path, i, svg {
 
 .sliders button {
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.5rem;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    top: 10px;
+    right: 10px;
+    padding: 0.3rem;
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
     border: none;
     background: rgb(73, 73, 73);
     color: white;
     cursor: pointer;
     font-weight: bold;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .panel {
@@ -256,4 +261,48 @@ input[type=range]::-webkit-slider-thumb {
     font-weight: 600;
     background-color: rgb(60, 60, 92);
     color: white; 
+}
+
+@media(max-width: 1024px) {
+    .color h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 745px) {
+    .adjust {
+        display: none;
+    }
+    .colors {
+        flex-direction: column;
+        height: calc(100vh - 15vh);
+    }
+    .color {
+        flex-direction: row;
+    }
+    .panel {
+        height: 15vh;
+    }
+}
+
+@media(max-width: 480px) {
+    .color h2 {
+        font-size: 1.6rem;
+    }
+    .colors {
+        height: calc(100vh - 14vh);
+    }
+    .panel {
+        height: 14vh;
+    }
+    .lock {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 350px) {
+    .panel button {
+        margin: 0.5rem;
+        padding: 1rem 1.5rem;
+    }
 }
