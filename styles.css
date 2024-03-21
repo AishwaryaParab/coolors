@@ -298,11 +298,20 @@ input[type=range]::-webkit-slider-thumb {
     .lock {
         font-size: 1.5rem;
     }
+    .copy-popup, .save-popup, .library-popup {
+        width: 350px;
+    }
 }
 
 @media(max-width: 350px) {
     .panel button {
         margin: 0.5rem;
         padding: 1rem 1.5rem;
+    }
+    .save-name {
+        width: 80%;
+    }
+    .copy-popup, .save-popup, .library-popup {
+        width: 300px;
     }
 }
